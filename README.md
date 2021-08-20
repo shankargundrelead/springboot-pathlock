@@ -35,6 +35,13 @@ environment:
 name: 'production'
 url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
+steps:
+- name: Download artifact from build job
+uses: actions/download-artifact@v2
+with:
+name: java-app
+path: '${{ github.workspace }}/target/*.war'
+
 - name: Deploy to Azure Web App
 id: deploy-to-webapp
 uses: azure/webapps-deploy@v2
