@@ -49,5 +49,5 @@ jobs:
       with:
         app-name: 'springboot-pathlock'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5f38c0106b564af99a4e34246719c9cf }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1693ea9edfaa4c559894401b9fbe1ea7 }}
         package: '*.war'
